@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>西安电子科技大学2025-07-02</title>
+  <title>多场景全景示例</title>
   <link rel="stylesheet" href="pannellum.css" />
   <script src="pannellum.js"></script>
   <style>
-    /* 全屏自适应 */
     html, body, #panorama {
-      width: 100vw;
-      height: 100vh;
       margin: 0; padding: 0;
+      width: 100vw; height: 100vh;
       overflow: hidden;
-      touch-action: none; /* 防止双指缩放冲突 */
     }
-    /* 放大控制按钮 */
+    /* 放大控制按钮样式 */
     .pnlm-ui-button {
       width: 48px !important;
       height: 48px !important;
@@ -36,18 +33,47 @@
 
   <script>
     const viewer = pannellum.viewer('panorama', {
-      type: "equirectangular",
-      panorama: "panorama2.jpg",
-      autoLoad: true,
-      gyro: false
+      default: {
+        firstScene: "scene1",
+        author: "Ryan",
+        sceneFadeDuration: 1000
+      },
+      scenes: {
+        scene1: {
+          title: "礼仪广场",
+          type: "equirectangular",
+          panorama: "panorama1.jpg",
+          pitch: -12,
+          yaw: 0,
+          hotSpots: [
+            {
+              pitch: 5,    // 热点垂直角度，可调
+              yaw: 1,     // 热点水平角度，可调
+              type: "scene",
+              text: "切换到下沉广场",
+              sceneId: "scene2"
+            }
+          ]
+        },
+        scene2: {
+          title: "下沉广场",
+          type: "equirectangular",
+          panorama: "panorama2.jpg",
+          pitch: -15,
+          yaw: -30,
+          hotSpots: [
+            {
+              pitch: 5,
+              yaw: -170,
+              type: "scene",
+              text: "返回礼仪广场",
+              sceneId: "scene1"
+            }
+          ]
+        }
+      }
     });
 
-    // 监听屏幕方向变化，触发Pannellum调整大小
-    window.addEventListener('orientationchange', () => {
-      setTimeout(() => {
-        viewer.resize();
-      }, 200);
-    });
   </script>
 </body>
 </html>
