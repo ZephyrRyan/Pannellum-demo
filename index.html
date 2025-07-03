@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>西安电子科技大学2025-07-03</title>
+  <title>西安电子科技大学</title>
   <link rel="stylesheet" href="pannellum.css" />
   <script src="pannellum.js"></script>
   <style>
@@ -71,11 +71,32 @@
           autoLoad: true,
           hotSpots: [
             {
-              pitch: 5,
+              pitch: 0,
               yaw: 1,
               type: "scene",
               text: "切换到下沉广场",
               sceneId: "scene2"
+            },
+            {
+              pitch: 5,
+              yaw: 50,
+              type: "scene",
+              text: "切换到巨构B楼",
+              sceneId: "scene3"
+            },            
+            {
+              pitch: -15,
+              yaw: -30,
+              type: "scene",
+              text: "切换到巨构E楼",
+              sceneId: "scene4"
+            },
+            {
+              pitch: -5,
+              yaw: -20,
+              type: "scene",
+              text: "切换到网安大楼",
+              sceneId: "scene5"
             }
           ]
         },
@@ -91,8 +112,143 @@
               pitch: 5,
               yaw: -170,
               type: "scene",
-              text: "返回礼仪广场",
+              text: "切换到礼仪广场",
               sceneId: "scene1"
+            },
+            {
+              pitch: -5,
+              yaw: 125,
+              type: "scene",
+              text: "切换到巨构B楼",
+              sceneId: "scene3"
+            },            
+            {
+              pitch: -15,
+              yaw: -120,
+              type: "scene",
+              text: "切换到巨构E楼",
+              sceneId: "scene4"
+            },
+            {
+              pitch: -15,
+              yaw: -50,
+              type: "scene",
+              text: "切换到网安大楼",
+              sceneId: "scene5"
+            }
+          ]
+        },
+        scene3: {
+          title: "巨构B楼",
+          type: "equirectangular",
+          panorama: "https://gallery-1314980208.cos.ap-beijing.myqcloud.com/panorama3.jpg",
+          pitch: -5,
+          yaw: 0,
+          autoLoad: true,
+          hotSpots: [
+            {
+              pitch: -5,
+              yaw: 150,
+              type: "scene",
+              text: "切换到礼仪广场",
+              sceneId: "scene1"
+            },
+            {
+              pitch: -8,
+              yaw: -158,
+              type: "scene",
+              text: "切换到下沉广场",
+              sceneId: "scene2"
+            },            
+            {
+              pitch: 0,
+              yaw: 180,
+              type: "scene",
+              text: "切换到巨构E楼",
+              sceneId: "scene4"
+            },
+            {
+              pitch: -3,
+              yaw: -155,
+              type: "scene",
+              text: "切换到网安大楼",
+              sceneId: "scene5"
+            }
+          ]
+        },
+        scene4: {
+          title: "巨构E楼",
+          type: "equirectangular",
+          panorama: "https://gallery-1314980208.cos.ap-beijing.myqcloud.com/panorama4.jpg",
+          pitch: 0,
+          yaw: 0,
+          autoLoad: true,
+          hotSpots: [
+            {
+              pitch: 2,
+              yaw: 50,
+              type: "scene",
+              text: "切换到礼仪广场",
+              sceneId: "scene1"
+            },
+            {
+              pitch: 0,
+              yaw: -35,
+              type: "scene",
+              text: "切换到下沉广场",
+              sceneId: "scene2"
+            },            
+            {
+              pitch: 5,
+              yaw: 5,
+              type: "scene",
+              text: "切换到巨构B楼",
+              sceneId: "scene3"
+            },
+            {
+              pitch: 5,
+              yaw: -82,
+              type: "scene",
+              text: "切换到网安大楼",
+              sceneId: "scene5"
+            }
+          ]
+        },
+        scene5: {
+          title: "网安大楼",
+          type: "equirectangular",
+          panorama: "https://gallery-1314980208.cos.ap-beijing.myqcloud.com/panorama5.jpg",
+          pitch: -10,
+          yaw: -170,
+          autoLoad: true,
+          hotSpots: [
+            {
+              pitch: -2,
+              yaw: 45,
+              type: "scene",
+              text: "切换到礼仪广场",
+              sceneId: "scene1"
+            },
+            {
+              pitch: -20,
+              yaw: 5,
+              type: "scene",
+              text: "切换到下沉广场",
+              sceneId: "scene2"
+            },            
+            {
+              pitch: -8,
+              yaw: 6,
+              type: "scene",
+              text: "切换到巨构B楼",
+              sceneId: "scene3"
+            },
+            {
+              pitch: -15,
+              yaw: 80,
+              type: "scene",
+              text: "切换到巨构E楼",
+              sceneId: "scene4"
             }
           ]
         }
